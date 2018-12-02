@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gusi_Kroliki
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             // Задача: У гусей и кроликов вместе 2n лап. Сколько может быть гусей и кроликов (вывести все возможные сочетания).
+            int g, k; //обьявим g-гуси, k-кролики
+            Console.Write("Введите число n:"); // запрос пользователя ввести число
+            int n = Convert.ToInt32(Console.ReadLine());  // конвертируем данные в int
+            Console.WriteLine("Всего лап: " + 2 * n); // умножим введенное число по условию задачи на 2
+            
+            Console.WriteLine();
+            Console.WriteLine(String.Concat("Гуси ", "   ", "Кролики ")); // выведем столбцы гуси и кролики
+
+            for (g = n, k = 0; g >= 0; g = g - 2, k++) // само решение расчета
+            {
+                Console.WriteLine(String.Concat(" ", g, "        ", k)); // выведем полученные данные
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
